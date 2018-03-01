@@ -11,13 +11,14 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+//    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+    let statusItem = NSStatusBar.system().statusItem(withLength: 100)
     var desktopCreated = "unknown"
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         let button = statusItem.button
-        button?.title = "🏈"
+        button?.title = "🏈2018年3月1日"
         
         let menu = NSMenu()
         let hideMenuItem = NSMenuItem.init(title: "Hide Desktop Files", action: #selector(toggleHideDesktopFiles(sender:)), keyEquivalent: "H")
